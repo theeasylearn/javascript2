@@ -1,0 +1,3 @@
+https://javascript.info/
+
+https://css-tricks.com/snippets/javascript/
