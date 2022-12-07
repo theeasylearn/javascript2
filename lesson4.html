@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>"
+    <h1>example of prompt dialogbox</h1><hr>
+
+    <script>
+        "use strict"
+        // simple interest calculator
+        
+        var amount = prompt("enter amount","0");
+        var rate = prompt("enter rate","0");
+        var year = prompt("enter year","0");
+
+        console.log(amount);
+        console.info(amount);
+        console.warn(amount);
+        console.error("this is used to display errors");
+        console.debug("this is used to display debug message");
+
+        //convert 
+        amount = parseInt(amount);
+        rate = parseInt(rate);
+        year = parseInt(year);
+
+        //expression process
+        var simple_interest = (amount * rate * year) / 100;
+        document.write("simple interest is " + simple_interest);
+
+    </script>
+</body>
+</html>
