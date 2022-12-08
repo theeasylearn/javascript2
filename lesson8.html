@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div 
+        {
+            border:1px solid black;
+            margin:10px;
+            font-size: 2rem;
+            padding:10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>INNERHTML property</h1>
+    <hr>
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+    <script>
+       var first = document.getElementById("first"); 
+       //first variable has reference of tag whose id is first
+
+       var second = document.getElementById("second");
+       var third = document.getElementById("third");
+
+       //change html inside tags 
+       first.innerHTML = "i am first div tag";
+       second.innerHTML = "i am second div tag";
+       third.innerHTML = "i am third div tag";
+
+       //get html inside tag
+       alert(first.innerHTML);
+       alert(second.innerHTML);
+       alert(third.innerHTML);
+    </script>
+</body>
+
+</html>

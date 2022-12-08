@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div 
+        {
+            border:1px solid black;
+            margin:10px;
+            font-size: 2rem;
+            padding:10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>INNERHTML property v2</h1>
+    <hr>
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+    <script>
+    
+       //change html inside tags 
+       document.getElementById("first").innerHTML = "i am first div tag";
+       document.getElementById("second").innerHTML = "i am second div tag";
+       document.getElementById("third").innerHTML = "i am third div tag";
+
+       //get html inside tag
+       alert( document.getElementById("first").innerHTML);
+       alert( document.getElementById("second").innerHTML);
+       alert( document.getElementById("third").innerHTML);
+    </script>
+</body>
+
+</html>
