@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript functions part 1</h1> <hr>
+    <script>
+        //create(define) user defined functions
+        //without argument without return value function 
+        function Greetings()
+        {
+            alert("Good Morning to everyone....");
+        }
+         //with arguments without return value function 
+        function SayHello(surname,name)
+        {
+            alert("Hello Mr/miss/Mrs " + surname + " " + name);
+        }
+        //without argument with return value function 
+        function GetDate()
+        {
+            //local variable
+            //var CurrentDate = new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear();
+            let date = new Date();
+            let CurrentDate = date.getDate() +  "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+            return CurrentDate;
+        }
+        //with argument with return value function 
+        function GetSquare(number)
+        {
+           let square = number * number;
+           return square;
+        }
+
+        //execute / run / call
+        Greetings();
+        SayHello("Patel","Ankit");
+        var CurrentDate = GetDate();
+        alert(CurrentDate);
+
+        var number = 10;
+        var square = GetSquare(number);
+        alert(`sqare is ${square}`);
+        
+    </script>
+</body>
+</html>
