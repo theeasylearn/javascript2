@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>example of Javascript default argument functions</h1> <hr>
+    <h3>use console to see output</h3>
+    <script>
+        function GetInterest(amount,rate=12.0,year=1)
+        {
+            //local variable
+            console.log(amount,rate,year);
+            let interest = (amount * rate * year)/100;
+            return interest;
+        }
+        var interest = GetInterest(1000,15,2);
+        console.log(interest);
+
+        interest = GetInterest(1000,13);
+        console.log(interest);
+
+        interest = GetInterest(1000);
+        console.log(interest);
+    </script>
+</body>
+</html>
