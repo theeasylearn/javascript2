@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Basic Mathmatical Calculator</h1> <hr>
+    <table align="center" border="2" cellpadding="10">
+        <tr>
+            <td>First number</td>
+            <td>
+                <input type="number" name="txtnum1" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>second number</td>
+            <td>
+                <input type="number" name="txtnum2" id="num2">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="addition" id="add" onclick="Calculate(this.id,event,value);" />
+                <input type="button" value="substraction" id="sub" onclick="Calculate(this.id,event,value);" />
+                <input type="button" value="multiplication" id="mul" onclick="Calculate(this.id,event,value);" />
+                <input type="button" value="division" id="div" onclick="Calculate(this.id,event,value);" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <b>output will be displayed here</b>
+            </td>
+        </tr>
+    </table>
+    
+    <script>
+        //create function 
+        function Calculate(ButtonId,event,ButtonValue)
+        {
+            
+        }
+    </script>
+</body>
+</html>
