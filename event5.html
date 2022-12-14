@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1> <hr>
+    <form method="post" action  ="success.html" id="form1">
+        <table align="center" border="2" cellpadding="10" width="70%">
+            <tr>
+                <td>Amount</td>
+                <td>
+                    <input type="number" name="amount" id="amount">
+                </td>
+                <td width="50%" id="amount_td">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Rate</td>
+                <td>
+                    <input type="number" name="rate" id="rate">
+                </td>
+                <td id="rate_td">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td>
+                    <input type="number" name="year" id="year">
+                </td>
+                <td id="year_td"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="Calculate Interest" id="btnsubmit"  />
+                    <input type="reset" value="clear all" id="btnclear"  />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var amount = document.getElementById("amount"); 
+        //amount has reference of html tag whose id is amount
+        
+        var rate = document.getElementById("rate"); 
+        var year = document.getElementById("year"); 
+        
+        //2nd method event handling
+        amount.onblur = function(){
+            console.log("amount event ....");
+            if(this.value=="")
+            {
+                console.log("amount is blank");
+            }
+        }
+
+        rate.onblur = function(){
+            if(this.value=="")
+                console.log("rate is blank");
+        }
+
+        year.onblur = function(){
+            if(this.value=="")
+                console.log("year is blank");
+        }
+
+    </script>
+</body>
+</html>

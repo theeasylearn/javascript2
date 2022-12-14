@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1> <hr>
+    <form method="post" action  ="success.html" id="form1">
+        <table align="center" border="2" cellpadding="10">
+            <tr>
+                <td>Amount</td>
+                <td>
+                    <input type="number" name="amount" id="amount">
+                </td>
+            </tr>
+            <tr>
+                <td>Rate</td>
+                <td>
+                    <input type="number" name="rate" id="rate">
+                </td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td>
+                    <input type="number" name="year" id="year">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Calculate Interest" id="btnsubmit"  />
+                </td>
+            </tr>
+        
+        </table>
+    </form>
+    <script>
+        //2nd method event handling
+        var form1 = document.querySelector("#form1");
+        form1.onsubmit = function(){
+            var amount = document.querySelector("#amount").value;
+            var rate = document.querySelector("#rate").value;
+            var year = document.querySelector("#year").value;
+            console.log(amount,rate,year);
+            var isValid = true;
+            if(amount=="")
+            {
+                alert("amount is required");
+                isValid = false;
+            }
+            if(rate=="")
+            {
+                alert("rate is required");
+                isValid = false;
+            }
+            if(year=="")
+            {
+                alert("year is required");
+                isValid = false;
+            }
+            if(isValid==true)
+            {
+                return true; //form will be submitted to success.html because success.html is webpage given in action attribute of form tag
+            }
+            
+        }
+    </script>
+</body>
+</html>
