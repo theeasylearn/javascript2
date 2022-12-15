@@ -57,13 +57,12 @@
         
         var rate = document.getElementById("rate"); 
         var year = document.getElementById("year"); 
-        
-        //2nd method event handling
-        amount.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
+        var CheckInput = function(ActiveControl,ErrorMessage)
+        {
+            var errortd = ActiveControl.id + "_td";
+            if(ActiveControl.value=="")
             {
-                document.getElementById(errortd).innerHTML = "amount can not be blank";
+                document.getElementById(errortd).innerHTML = ErrorMessage;
                 document.getElementById(errortd).className = "error";
             }
             else 
@@ -71,34 +70,18 @@
                 document.getElementById(errortd).innerHTML = "";
                 document.getElementById(errortd).className = "";
             }
+        }
+        //2nd method event handling
+        amount.onblur = function(){
+            CheckInput(this,"Amount can not be blank");
         }
 
         rate.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
-            {
-                document.getElementById(errortd).innerHTML = "rate can not be blank";
-                document.getElementById(errortd).className = "error";
-            }
-            else 
-            {
-                document.getElementById(errortd).innerHTML = "";
-                document.getElementById(errortd).className = "";
-            }
+            CheckInput(this,"Rate can not be blank");
         }
 
         year.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
-            {
-                document.getElementById(errortd).innerHTML = "year can not be blank";
-                document.getElementById(errortd).className = "error";
-            }
-            else 
-            {
-                document.getElementById(errortd).innerHTML = "";
-                document.getElementById(errortd).className = "";
-            }
+            CheckInput(this,"Year can not be blank");
         }
 
     </script>

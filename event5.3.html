@@ -21,7 +21,7 @@
             <tr>
                 <td>Amount</td>
                 <td>
-                    <input type="number" name="amount" id="amount">
+                    <input type="number" name="amount" id="amount" class="myinput">
                 </td>
                 <td width="50%" id="amount_td">
 
@@ -30,7 +30,7 @@
             <tr>
                 <td>Rate</td>
                 <td>
-                    <input type="number" name="rate" id="rate">
+                    <input type="number" name="rate" id="rate" class="myinput">
                 </td>
                 <td id="rate_td">
 
@@ -39,10 +39,11 @@
             <tr>
                 <td>Year</td>
                 <td>
-                    <input type="number" name="year" id="year">
+                    <input type="number" name="year" id="year" class="myinput">
                 </td>
                 <td id="year_td"></td>
             </tr>
+          
             <tr>
                 <td colspan="3" align="center">
                     <input type="submit" value="Calculate Interest" id="btnsubmit"  />
@@ -52,18 +53,12 @@
         </table>
     </form>
     <script>
-        var amount = document.getElementById("amount"); 
-        //amount has reference of html tag whose id is amount
-        
-        var rate = document.getElementById("rate"); 
-        var year = document.getElementById("year"); 
-        
-        //2nd method event handling
-        amount.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
+        var CheckInput = function(ActiveControl,ErrorMessage)
+        {
+            var errortd = ActiveControl.id + "_td";
+            if(ActiveControl.value=="")
             {
-                document.getElementById(errortd).innerHTML = "amount can not be blank";
+                document.getElementById(errortd).innerHTML = ErrorMessage;
                 document.getElementById(errortd).className = "error";
             }
             else 
@@ -72,35 +67,16 @@
                 document.getElementById(errortd).className = "";
             }
         }
-
-        rate.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
-            {
-                document.getElementById(errortd).innerHTML = "rate can not be blank";
-                document.getElementById(errortd).className = "error";
-            }
-            else 
-            {
-                document.getElementById(errortd).innerHTML = "";
-                document.getElementById(errortd).className = "";
+        var myinputs = document.getElementsByClassName("myinput"); //return array
+        var index;
+        for(index=0;index<myinputs.length;index=index+1)
+        {
+            myinputs[index].onblur = function(){
+                var message = this.id + " can not be blank";
+                // console.log('event triggered....',myinputs[index].id);
+                CheckInput(this,message);
             }
         }
-
-        year.onblur = function(){
-            var errortd = this.id + "_td";
-            if(this.value=="")
-            {
-                document.getElementById(errortd).innerHTML = "year can not be blank";
-                document.getElementById(errortd).className = "error";
-            }
-            else 
-            {
-                document.getElementById(errortd).innerHTML = "";
-                document.getElementById(errortd).className = "";
-            }
-        }
-
     </script>
 </body>
 </html>
