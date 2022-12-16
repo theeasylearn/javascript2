@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        #grandparent {
+            background-color: orange;
+            width: 300px;
+            height: 300px;
+        }
+
+        #parent {
+            color: black !important;
+            background-color: white;
+            width: 200px;
+            height: 200px;
+        }
+
+        #child {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="grandparent">GrandParent
+            <div id="parent">Parent
+                <div id="child">Child</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var grandparent = document.getElementById("grandparent");
+        var parent = document.getElementById("parent");
+        var child = document.getElementById("child");
+
+        grandparent.addEventListener("click",function(){
+            alert("click event of grandparent triggered....");
+        },false);
+
+        parent.addEventListener("click",function(){
+            alert("click event of parent triggered....");
+        },false);
+
+        child.addEventListener("click",function(){
+            alert("click event of child triggered....");
+        },false);
+
+        
+    </script>
+</body>
+
+</html>
