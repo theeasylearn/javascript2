@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Object (without class)</h1> <hr>
+    <h3>use console to see output</h3>
+    <script>
+        // create Object 
+        var person = {
+            //instance variable/property
+            name : "nidhi",
+            age : 21,
+            weight : 55.22,
+            gender : false,
+
+            //create method 
+            display : function(){
+                console.log(this.name," ",this.age," ",this.weight," ",this.gender);
+            }
+            
+        };
+
+        //how to access instance variable of the object 
+        console.log("before changing value");
+        person.display(); //calling method of the object
+        //how to change  instance variable of the object 
+        person.name = "Vinay Joshi";
+        person.weight = 59.25;
+        person.age = 27;
+        person.gender = true; 
+
+        console.log("after changing value");
+        person.display(); //calling method of the object
+    </script>
+</body>
+</html>
