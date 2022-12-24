@@ -1,0 +1,8 @@
+create interest calculator using ES6 technique
+class calculator must have 3 instance variable.
+    amount,rate,year
+class calculator must have 2 methods
+    getSimpleInterest()
+        which return simple interest using  amount,rate,year
+    getCompoundInterest()
+        which return compound interest using  amount,rate,year     

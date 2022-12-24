@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Single level inheritance</h1> <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+        class Person
+        {
+            walk()
+            {
+                console.log("I can walk");
+            }
+            talk()
+            {
+                console.log("I can talk");
+            }
+        }
+        class Student extends Person
+        {
+            read()
+            {
+                console.log("I can read");
+            }
+            write()
+            {
+                console.log("I can write");
+            }
+            WhatICanDo()
+            {
+                //calling parent class method from child class 
+                super.talk();
+                super.walk();
+
+                //calling same class method
+                this.read();
+                this.write();
+            }
+        }
+
+        var s1 = new Student(); //s1 is Student type variable
+        s1.WhatICanDo();
+
+        s1.walk();
+        s1.talk();
+        s1.read();
+        s1.write();
+
+    </script>
+</body>
+</html>

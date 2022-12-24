@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Single level inheritance</h1> <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+        class Foot 
+        {
+            constructor(inches)
+            {
+                //create instance variable (inches)
+                this.inches = inches;
+                console.log("parent class constructor executed");
+            }
+            getFoot()
+            {
+                //return foot of inches
+                //local variable 
+                let result = this.inches / 12;
+                return result;
+            }
+        }
+
+        class Meter extends Foot 
+        {
+            constructor(inches)
+            {
+               super(inches); //calling parent class constructor.
+               console.log("child class constructor executed");
+            }
+            getMeter()
+            {
+                //local variable 
+                let temp = super.getFoot() / 3.28;
+                return temp;
+                //return meter of inches
+            }
+        }
+        //create variable of Meter
+        let inches = parseInt(prompt("Enter inches",'1'));
+        var m1 = new Meter(inches);
+        var foots = m1.getFoot();
+        var meters = m1.getMeter();
+        console.log(`foot = ${foots} meter=${meters}`);
+    </script>
+</body>
+</html>

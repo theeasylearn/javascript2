@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES 6 way to create class & class type variables (object)</h1>
+    <hr>
+    <form action="" id="myform">
+        <table align="center" border="2" width="50%" cellpadding="5">
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>Calculator</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>
+                    <input type="number" id="height" >
+                </td>
+            </tr>
+            <tr>
+                <td>Width</td>
+                <td>
+                    <input type="number" id="width" >
+                </td>
+            </tr>
+            <tr>
+                <td>Length</td>
+                <td>
+                    <input type="number" id="length" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="btncalculate" value="get result">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" id="output">
+
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //es6 technique 
+        class Box 
+        {
+            constructor(length,height,width)
+            {
+                //create instance variable
+                this.height = height;
+                this.width = width;
+                this.length = length;
+                console.log("constructor called");
+            }
+            getArea()
+            {
+                //local variable because it is declared with let keyword inside function 
+                let area = this.length * this.width;
+                return area;
+            }
+            getVolume()
+            {
+                //local variable because it is declared with let keyword inside function 
+                let volume = this.length * this.width * this.height;
+                return volume;
+            }
+        };
+        //create class type variable
+        //var variable-name = new classname()
+        let btncalculate = document.getElementById("btncalculate");
+        btncalculate.addEventListener("click",function(){
+            let height,width,length;
+            height = document.getElementById("height").value; 
+            //return value given in tag whose is height
+            width = document.getElementById("width").value; 
+            length = document.getElementById("length").value; 
+
+            //create variable of Box class
+            var b1 = new Box(length,height,width);
+            var area = b1.getArea();
+            var volume = b1.getVolume();
+
+            document.getElementById("output").innerHTML = `area = ${area} volume = ${volume}`;
+        },false);
+       
+    </script>
+</body>
+</html>

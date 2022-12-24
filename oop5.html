@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES 6 way to create class & class type variables (object)</h1>
+    <hr>
+    <h3>use console see output</h3>
+    <script>
+        //es6 technique 
+        class Box 
+        {
+            constructor(length,height,width)
+            {
+                //create instance variable
+                this.height = height;
+                this.width = width;
+                this.length = length;
+                console.log("constructor called");
+            }
+            getArea()
+            {
+                //local variable because it is declared with let keyword inside function 
+                let area = this.length * this.width;
+                return area;
+            }
+            getVolume()
+            {
+                //local variable because it is declared with let keyword inside function 
+                let volume = this.length * this.width * this.height;
+                return volume;
+            }
+        };
+        //create class type variable
+        //var variable-name = new classname()
+        var b1 = new Box(10,20,30); //it will call constructor automatically
+        var area = b1.getArea();
+        console.log(`area = ${area}`);
+        var volume = b1.getVolume();
+        console.log(`volume = ${volume}`);
+    </script>
+</body>
+</html>
