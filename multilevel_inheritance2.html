@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multie level inheritance</h1> <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+        class Foot 
+        {
+            constructor(inches)
+            {
+                //create instance variable (inches)
+                this.inches = inches;
+                console.log("foot class constructor executed");
+            }
+            getFoot()
+            {
+                //return foot of inches
+                //local variable 
+                let result = this.inches / 12;
+                return result;
+            }
+        }
+
+        class Meter extends Foot 
+        {
+            constructor(inches)
+            {
+               super(inches); //calling parent class constructor.
+               console.log("meter class constructor executed");
+            }
+            getMeter()
+            {
+                //local variable 
+                let temp = super.getFoot() / 3.28;
+                return temp;
+                //return meter of inches
+            }
+        }
+        
+        class KM extends Meter
+        {
+            constructor(inches)
+            {
+                super(inches);
+                console.log("km class constructor executed");
+            }
+            getKM()
+            {
+                //local variable 
+                let temp = super.getMeter() / 1000;
+                return temp;
+            }
+        }
+        
+        //create variable of Meter
+        let inches = parseInt(prompt("Enter inches",'1'));
+        var k1 = new KM(inches);
+        var foots = k1.getFoot();
+        var meters = k1.getMeter();
+        var kms = k1.getKM();
+        console.log(`foot = ${foots} meter=${meters} kilometer = ${kms}`);
+        
+    </script>
+</body>
+</html>

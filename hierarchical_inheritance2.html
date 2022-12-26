@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hierarchical inheritance</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+       class IO /* input output*/
+       {
+            log(msg)
+            {
+                console.log(msg);
+            }
+       }
+       class Circle extends IO
+       {
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+                super.log("Circle class constructor called");
+            }
+            getArea()
+            {
+                let area = 3.14 * this.radius * this.radius;
+                return area;
+            }
+       }
+       class Triangle extends IO
+       {
+            constructor(base,height)
+            {
+                super();
+                this.base = base;
+                this.height = height;
+                super.log("Triangle class constructor called");
+            }
+            getArea()
+            {
+                let area = 0.5 * this.base * this.height;
+                return area;
+            }
+       }
+
+       let c1 = new Circle(100);
+       let area = c1.getArea();
+       c1.log("Circle area = " + area);
+
+
+       let t1 = new Triangle(100,50 );
+       area = t1.getArea();
+
+       t1.log("Triangle area = " + area);
+
+
+    </script>
+</body>
+
+</html>
