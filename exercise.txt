@@ -6,3 +6,34 @@ class calculator must have 2 methods
         which return simple interest using  amount,rate,year
     getCompoundInterest()
         which return compound interest using  amount,rate,year     
+
+
+Single level inheritance
+1 create single level inheritance example which has two class (input must be take from user using html)
+    1) kg class 
+        has method getKg which return kg of given grams 
+    2) Ton class  inherit kg class 
+        has method getTon() which return Ton of given grams 
+
+2 create multilevel inheritance example which has two class (input must be take from user using html)
+    1) kg class 
+        has method getKg which return kg of given grams 
+    2) Ton class  inherit kg class 
+        has method getTon() which return Ton of given grams
+    3) MetricTon class  inherit kg class 
+        has method getMTC() which return MetricTon of given grams
+
+Single level inheritance
+3 create single level inheritance example which has two class (input must be take from user using html)
+    1) KB class 
+        has method getKB which return KB of given bytes 
+    2) MB class  inherit  KB class 
+        has method getMB which return MB of given bytes 
+        
+4 create multilevel inheritance example which has two class (input must be take from user using html)
+    1) KB class 
+        has method getKB which return KB of given bytes 
+    2) MB class  inherit  KB class 
+        has method getMB which return MB of given bytes 
+    3) GB class  inherit  MB class 
+        has method getGB which return GB of given bytes 

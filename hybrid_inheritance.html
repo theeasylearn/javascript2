@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hybrid inheritance</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+        class Person {
+            walk() {
+                console.log("I can walk");
+            }
+            talk() {
+                console.log("I can talk");
+            }
+        }
+        class Student extends Person {
+            read() {
+                console.log("I can read");
+            }
+            write() {
+                console.log("I can write");
+            }
+            WhatICanDo() {
+                console.log("Student class WhatICanDo method called");
+                //calling parent class method from child class 
+                super.talk();
+                super.walk();
+
+                //calling same class method
+                this.read();
+                this.write();
+            }
+        }
+        class Teacher extends Person {
+            teach() {
+                console.log("I can teach javascript");
+            }
+            help() {
+                console.log("I can help in solving problems related to javascript");
+            }
+
+            WhatICanDo() {
+                console.log("Teacher class WhatICanDo method called");
+                super.walk();
+                super.talk();
+                this.teach();
+                this.help();
+
+            }
+        }
+        class Developer extends Student 
+        {
+            code()
+            {
+                console.log('I can write code in javascript');
+            }
+            debug()
+            {
+                console.log('I can debug code in javascript');
+            }
+            //Method Overridding
+            WhatICanDo() 
+            {
+                super.WhatICanDo(); //calling parent class method 
+                this.code(); //calling same class method
+                this.debug(); //calling same class method
+            }
+        }
+        var d1 = new Developer(); //s1 is Student type variable
+        d1.WhatICanDo();
+    </script>
+</body>
+
+</html>

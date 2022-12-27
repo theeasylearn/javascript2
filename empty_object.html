@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of empty object</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <script>
+        //Create empty object 
+        //1st method 
+        let student = new Object(); //empty object 
+
+        let subject = {};
+        console.log("display empty object");
+        console.log(student);
+        console.log(subject);
+
+        //let us add property into empty object
+        student.name = "Ankit Patel";
+        student.age = 37;
+        student.weight = 75.25;
+        student.gender = true;
+        console.log("display student object after adding properties");
+        console.log(student);
+        student.weight = 77.99;
+        console.log("display student object after updating property");
+        console.log(student);
+
+        //another way to add properties
+        subject['name'] = 'javascript';
+        subject['fees'] = 9999;
+        subject['duration'] = 100;
+        console.log("display subject object after adding properties");
+        console.log(subject);
+        subject['name'] = 'introduction to javascript';
+        console.log("display subject object after updating properties");
+        console.log(subject);
+    </script>
+</body>
+</html>

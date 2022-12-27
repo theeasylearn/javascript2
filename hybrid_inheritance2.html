@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hybrid inheritance</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <hr>
+    <script>
+       class IO /* input output*/
+       {
+            log(msg)
+            {
+                console.log(msg);
+            }
+       }
+       class Circle extends IO
+       {
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+                super.log("Circle class constructor called");
+            }
+            getArea()
+            {
+                let area = 3.14 * this.radius * this.radius;
+                return area;
+            }
+       }
+       class Sphare extends Circle
+       {
+        constructor(radius)
+        {
+            super(radius);
+            super.log("Sphare class constructor called");
+        }
+        //method Overridding
+        getArea()
+        {
+            //sphare area calculate formula is 4*pi*r*r
+            let temp = 4 * super.getArea();
+            return temp;
+        }
+       }
+       class Triangle extends IO
+       {
+            constructor(base,height)
+            {
+                super();
+                this.base = base;
+                this.height = height;
+                super.log("Triangle class constructor called");
+            }
+            getArea()
+            {
+                let area = 0.5 * this.base * this.height;
+                return area;
+            }
+       }
+
+       let s1 = new Sphare(100);
+       let area = s1.getArea(); //Sphare class method will be called
+       s1.log("Sphare area = " + area);
+    </script>
+</body>
+
+</html>
