@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Example of how to check key exist or not</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <script>
+       //es 6 technique 
+       class Student
+       {
+            constructor(name,age)
+            {
+                //instance variable
+                this.name = name;
+                this.age = age;
+            }
+            display()
+            {
+                console.log("Name",this.name,"Age",this.age);
+            }
+       }
+
+       //create class type variable
+       var s1 = new Student('Mehul',25);
+       var display = s1.display.bind(s1);
+       setInterval(display,5000); //5000 means 5 seconds because 1000(millisecond) means 1 seconds
+      </script>
+</body>
+
+</html>

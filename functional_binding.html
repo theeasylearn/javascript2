@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Example of how to check key exist or not</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <script>
+       //es 6 technique 
+       class MyMath
+       {
+            constructor(num1,num2)
+            {
+                //instance variable
+                this.num1 = num1;
+                this.num2 = num2;
+            }
+            addition()
+            {
+                return this.num1 + this.num2;
+            }
+            substraction()
+            {
+                return this.num1 - this.num2;
+            }
+            multiplication()
+            {
+                return this.num1 * this.num2;
+            }
+            division()
+            {
+                return this.num1 / this.num2;
+            }
+       }
+
+       //create class type variable
+       var num1 = parseInt(prompt("Enter number",'1'));
+       var num2 = parseInt(prompt("Enter another number",'1'));
+       var m1 = new MyMath(num1,num2);
+       console.log(m1);
+       console.log(m1.addition());
+       console.log(m1.substraction());
+       console.log(m1.multiplication());
+       console.log(m1.division());
+
+       //functional binding 
+       var add = m1.addition.bind(m1);
+       var sub = m1.substraction.bind(m1);
+       var mul = m1.multiplication.bind(m1);
+       var div =m1.division.bind(m1);
+
+       console.log(add());
+       console.log(sub());
+       console.log(mul());
+       console.log(div());
+      </script>
+</body>
+
+</html>

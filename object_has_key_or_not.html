@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Example of how to check key exist or not</h1>
+    <hr>
+    <h3>use console to see output</h3>
+    <script>
+        let city = {
+            name: 'Bhavnagar',
+            pincode: 364001,
+        }
+        console.log(city);
+        //1st method
+        if (city.pincode !== undefined)
+            console.log("city key exists", city.pincode);
+        else
+            console.log("city key does not exists");
+        
+        if ("pincode" in city) //true
+            console.log("city key exists", city.pincode);
+        else
+            console.log("city key does not exists");
+    </script>
+</body>
+
+</html>
