@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow functions concept</h1> <hr>
+    <h3>use console to see output</h3>
+    <h2 id="output">here we will display some output</h2>
+    <script>
+        //arrow functions
+        // let function-name = ([arguments]) => single line expression 
+        let log = (message) => console.log(message);
+        let $ = (tag) => document.getElementById(tag);
+        let html = (tag,value) => $(tag).innerHTML = value;
+        let add = (num1,num2) => num1 + num2;
+        var message = "the easylearn academy";
+        log(message);
+        let num1 = 100;
+        let num2 = 200;
+        let result = num1 + num2;
+        // document.getElementById("output").innerHTML =  `${num1} + ${num2} = ${result}`;
+        //$("output").innerHTML =  `${num1} + ${num2} = ${result}`;
+        html("output",`${num1} + ${num2} = ${result}`);
+    </script>
+</body>
+</html>

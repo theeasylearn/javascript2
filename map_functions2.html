@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array and map functions concept</h1> <hr>
+    <h3>use console to see output</h3>
+    <script>
+        //arrow functions
+        // let function-name = ([arguments]) => single line expression 
+        let log = (message) => console.log(message);
+        let $ = (tag) => document.getElementById(tag);
+        let html = (tag,value) => $(tag).innerHTML = value;
+        
+        //define array of object
+        let students = [
+            {name:'ram',age:35},
+            {name:'Alex',age:32},
+            {name:'abdul',age:28},
+        ];
+        log(students);
+        log(students.length); //length property return size of array/list
+
+        let AboveThirty = students.filter(function(SingleObject){
+            // log("Student Name " + SingleObject.name);
+            // log("Student Age " + SingleObject.age);
+            if(SingleObject.age>=30)
+                return SingleObject;
+        });
+        log(AboveThirty);
+        log(AboveThirty.length); 
+    </script>
+</body>
+</html>

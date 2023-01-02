@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array and map functions concept</h1> <hr>
+    <h3>use console to see output</h3>
+    <script>
+        //arrow functions
+        // let function-name = ([arguments]) => single line expression 
+        let log = (message) => console.log(message);
+        let $ = (tag) => document.getElementById(tag);
+        let html = (tag,value) => $(tag).innerHTML = value;
+        
+        //define array 
+        let numbers = [10,20,30,40,50,100,200];
+        log(numbers);
+        log(numbers.length); //length property return size of array/list
+
+        //numbers.map return new array
+        let squares = numbers.map(function(SingleNumber){
+            return SingleNumber * SingleNumber;
+        });
+        log(squares);
+        log(numbers);
+    </script>
+</body>
+</html>
