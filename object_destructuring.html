@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Destructuring</h1> <hr>
+    <h4>use console to see output</h4>
+    <hr>
+    <script>
+        //create object 
+        class Movie 
+        {
+            name =  "Avatar";
+            year = 2022;
+            director = "james camroon";
+        };
+
+        //create class type variable 
+        //let variable-name = new classname()
+        let m1 = new Movie();
+        console.log(m1.name);
+        console.log(m1.year);
+        console.log(m1.director);
+
+        //object destructing (storing value of  object properties into variable)
+        let {name:MovieName,year:MovieYear,director:MovieDirector} = m1;
+        console.log("showing variable's value on screen")
+        console.log(MovieName);
+        console.log(MovieYear);
+        console.log(MovieDirector);
+
+        MovieName = "Avatar 2 - 2022";
+        console.log(m1.name);
+        console.log(MovieName);
+    </script>
+</body>
+</html>

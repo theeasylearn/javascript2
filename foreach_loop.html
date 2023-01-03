@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for each loop</h1>
+    <hr>
+    <table border="2" width="100%" cellpadding="10">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+    <script>
+        //array of object
+        let students = [
+            {name:"arun",age:22,email:'arun@gmail.com'},
+            {name:"bimal",age:33,email:'bimal@gmail.com'},
+            {name:"chintan",age:44,email:'chintan@gmail.com'},
+            {name:"jiya",age:11,email:'jiya@gmail.com'},
+            {name:"divya",age:12,email:'divya@gmail.com'},
+        ]; 
+        //console.log(students);
+        var data = document.getElementById("data");
+        for (let index = 0; index < students.length; index++) {
+            const object = students[index];
+            console.log(index," ",object);
+            var row = `<tr><td>${index+1}</td>`;
+            for(var key in object)
+            {
+                row = row + `<td>${object[key]}</td>`;
+            }
+            row = row + "</tr>";
+            data.innerHTML = data.innerHTML + row;
+        }
+    </script>
+</body>
+</html>
