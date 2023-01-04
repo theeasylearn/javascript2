@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Clone</h1> <hr>
+    <p>use console to see output</p>
+    <script>
+        //create object
+        var course =
+        {
+            name : "React js",
+            duration : 150,
+            trainer : "Ankit"
+        };
+
+        console.log(course);
+
+        let another_course = course; //will store referrence of course in another_course it means if we change another_course object property or vice versa it will also change property of course 
+
+        another_course.name = "Django";
+        course.duration = 140;
+        console.log("after changing value ");
+        console.log("course");
+        console.log(course);
+
+        console.log("another course");
+        console.log(another_course);
+
+        //object cloning (process of copy each and every property of one object into another object)
+        var clone = {}; //empty object
+        console.log("before cloning value clone is");
+        console.log(clone);
+
+        //we use foreach loop for object cloning
+        for(let key in course)
+        {
+            clone[key] = course[key];
+        }
+        console.log("after cloning value clone is");
+        console.log(clone);
+
+        clone.name  = "Flutter";
+        course.duration = 155;
+        console.log("after changing value ");
+        console.log("course");
+        console.log(course);
+        console.log("clone");
+        console.log(clone);
+    </script>
+</body>
+</html>
